@@ -51,8 +51,8 @@ h3{
     height: 100%;
     background-color: #000000ab;
     z-index: 1;
-    transform: translateX(0px);
-    transition: 2s;
+    transform: translateX(-1850px);
+    transition: 1s;
 }
 #invoiceDivChild{
     overflow: hidden;
@@ -165,6 +165,7 @@ input::-webkit-inner-spin-button {
     width: 94%;
 }
 #saveDiv{
+    position: relative;
     height: 10%;
     width: 100%;
     font-size: 30px;
@@ -236,6 +237,11 @@ input::-webkit-inner-spin-button {
     margin-top: 20px;
     font-size: 20px;
 }
+#addNewItemButton:hover{
+    cursor: pointer;
+    background-color: #DFE3FA;
+    color: #7E88C3;
+}
 .clsForInvoiceDiv{
     padding:  20px 20px 20px 20px;
     border-radius: 30px;
@@ -246,15 +252,66 @@ input::-webkit-inner-spin-button {
     background-color: #F9FAFE;
     color: #7E88C3;
 }
+#discardButton:hover{
+    cursor: pointer;
+    background-color: #DFE3FA;
+    color: #7E88C3;
+}
+#messageDiv{
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    width: 500px;
+    height: 280px;
+    background-color: white;
+    border-radius: 10px;
+    z-index: 1;
+    padding-bottom: 30px;
+    box-shadow: 0px 15px 20px 10px rgb(152 152 152 / 40%);
+    transform: translate(30px , -400px);
+}
+#messageBox{
+    width: 90%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    color: #0C0E16;
+}
+#closeButton{
+    width: 35%;
+    height: 20%;
+    background-color: #EC5757;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-size: 20px;
+}
 #draftButton{
     background-color: #373B53;
     color: #979797;
     margin-left: 180px;
 }
+#draftButton:hover{
+    background-color: #0C0E16;
+    color: #888EB0;
+    margin-left: 180px;
+    cursor: pointer;
+}
 #saveButton{
     background-color: #7C5DFA;
     color: #FFFFFF;
     margin-left: 15px;
+}
+#saveButton:hover{
+    cursor: pointer;
+    background-color: #9277FF;
+    color: white;
 }
 #logoImg{
     height: 10%;
@@ -280,6 +337,9 @@ input::-webkit-inner-spin-button {
 #themeImg{
     width: 100px;
     height: 80px;
+}
+#themeImg:hover{
+    cursor: pointer;
 }
 #avatarImg{
     height: 60px;
@@ -320,6 +380,9 @@ input::-webkit-inner-spin-button {
     align-items: center; */
     margin-top: 150px;
     font-size: 17px;
+}
+#head-div2:hover{
+cursor: pointer;
 }
 #filterButton{
     background-color: transparent;
@@ -374,6 +437,10 @@ input::-webkit-inner-spin-button {
     flex-direction: row;
     align-items:center ;
 }
+#newInvoiceButton:hover{
+    background-color: #9277FF;
+    cursor: pointer;
+}
 #plusButton{
     width: 10%;
     height: 30%;
@@ -393,15 +460,17 @@ input::-webkit-inner-spin-button {
 }
 .mainInvoiceDiv{
     height: 12%;
-    width: 100%;
+    width:  99.5%;
     background-color: #FFFFFF;
     margin-top: 25px;
     border-radius: 15px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    box-shadow: 0px 5px 10px 5px rgba(146, 119, 255, 0.17);
-
+    box-shadow: -7px 11px 15px -5px rgb(146 119 255 / 17%);
+}
+.mainInvoiceDiv:hover{
+    border: 1px solid #7C5DFA;
 }
 customerID{
     color: #0C0E16;

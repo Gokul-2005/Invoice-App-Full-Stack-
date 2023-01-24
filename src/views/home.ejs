@@ -4,14 +4,14 @@
 <title>Invoice App</title>
 <div id="whole-Div">
     <div id="nav-div">
-        <img id="logoImg" src="<%=Img.logoImg%>" alt="">
-        <div id="opt-div"> <div id="theme-div"><img id="themeImg" src="<%=Img.moonImg%>" alt=""> </div> <div id="profile-div"> <img id="avatarImg" src="<%=Img.avatarImg%>" alt=""> </div> </div>
+        <img id="logoImg" src="<%=Img.logoImg%>" onclick="reloadPage()" alt="">
+        <div id="opt-div"> <div id="theme-div"><img id="themeImg" onclick="changeTheme(this)" src="<%=Img.moonImg%>" alt=""> </div> <div id="profile-div"> <img id="avatarImg" src="<%=Img.avatarImg%>" alt=""> </div> </div>
     </div>
     <div id="newInvoiceDiv"> <div id="invoiceDivChild"> <%- include("./partials/NewInvoiceForm") %> </div></div>
     <div id="main-div">
         <div id="head-div">
             <div id="head-div1"><h1> Invoices </h1><h3>There are <%= Img.JsonData.length%> total invoices</h3> </div>
-            <div id="head-div2">Filter by status &nbsp;<button id="filterButton" onclick="openSortOption()"><i class="fa-solid fa-angle-down"></i></button><div id="sort-Div">
+            <div id="head-div2" onclick="openSortOption()">Filter by status &nbsp;<button id="filterButton"><i class="fa-solid fa-angle-down"></i></button><div id="sort-Div">
             <button class="sortOption" onclick="sortInvoice(this)">All</button>    
             <button class="sortOption" onclick="sortInvoice(this)">Draft</button>
             <button class="sortOption" onclick="sortInvoice(this)">Paid</button>
@@ -22,9 +22,7 @@
 
 
 
-        <div id="invoice-div">
-            <% for(let i = 0 ; i<Img.JsonData.length ; i++) { %>
-                <div class="mainInvoiceDiv">
+        <div id="invoice-div" onload="checkBackground('<%= Img.bgImg%>')"><% for(let i = 0 ; i<Img.JsonData.length ; i++) { %> <div class="mainInvoiceDiv" onclick="invoiceInfo(this)">
                     <h3> # <customerID> <%= Img.JsonData[i].id  %></customerID></h3>
                     <%  let date = new Date(Img.JsonData[i].paymentDue);
                     let newDateString = new Intl.DateTimeFormat("en-US", {
@@ -44,9 +42,8 @@
                     <% if(Img.JsonData[i].status=="draft") { %> 
                         <div class="status statusDraft">• Draft</div>    
                     <% } %>    
-                    <button id="view-Detail" onclick="invoiceInfo(this)"> <img src=" <%= Img.rightArrowImg %> "  /> </button>
-                </div>
-           <% } %>
+                    <button id="view-Detail"> <img src=" <%= Img.rightArrowImg %> "  /></button>
+                </div><% } %>
         </div>
     </div>
 </div>
