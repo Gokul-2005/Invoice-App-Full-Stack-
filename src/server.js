@@ -6,7 +6,7 @@ const bodyParser = require('body-parser'); //This line contains body-parser modu
 const path = require('path');
 const http = require('http');
 const  socketio = require('socket.io');
-const port = process.env.PORT || 5050 ;
+const port = process.env.PORT || 5056 ;
 // const res = require('express/lib/response');
 //HTTP Server
 const server = http.createServer(app);
@@ -108,7 +108,7 @@ app.get("/index",(request,response) =>{
         avatarImg : 'images/image-avatar.jpg',
         rightArrowImg : 'images/icon-arrow-right.svg',
         bgImgLight : 'images/bgImgLight.png',
-        bgImgDark : 'images/bgImgDark.png', 
+        bgImgDark : 'images/bgImgDark.png',
     }
     response.render("home",{Img});
     // response.send("Database Connected");

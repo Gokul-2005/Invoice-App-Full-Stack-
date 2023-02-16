@@ -11,12 +11,14 @@
     <div id="main-div">
         <div id="head-div">
             <div id="head-div1"><h1> Invoices </h1><h3>There are <%= Img.JsonData.length%> total invoices</h3> </div>
-            <div id="head-div2" onclick="openSortOption()">Filter by status &nbsp;<button id="filterButton"><i class="fa-solid fa-angle-down"></i></button><div id="sort-Div">
+            <div id="head-div2" onclick="openSortOption()">Filter by status &nbsp;<button id="filterButton"><i class="fa-solid fa-angle-down"></i></button>
+            <div id="sort-Div">
             <button class="sortOption" onclick="sortInvoice(this)">All</button>    
             <button class="sortOption" onclick="sortInvoice(this)">Draft</button>
             <button class="sortOption" onclick="sortInvoice(this)">Paid</button>
             <button class="sortOption" onclick="sortInvoice(this)">Pending</button>
-            </div></div>
+            </div>
+        </div>
             <div id="head-div3"> <button id="newInvoiceButton" onclick="CreateNewInvoice()" > <div id="plusButton"><i class="fa-solid fa-plus"></i></div> &nbsp;  &nbsp; New Invoice </button> </div>
         </div>
 
