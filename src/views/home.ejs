@@ -24,7 +24,7 @@
 
 
 
-        <div id="invoice-div" onload="checkBackground('<%= Img.bgImg%>')"><% for(let i = 0 ; i<Img.JsonData.length ; i++) { %> <div class="mainInvoiceDiv" onclick="invoiceInfo(this)">
+        <div id="invoice-div" onload="checkBackground('<%= Img.bgImg%>')"><% for(let i = Img.JsonData.length-1 ; i>=0 ; i--) { %> <div class="mainInvoiceDiv" onclick="invoiceInfo(this)">
                     <h3> # <customerID> <%= Img.JsonData[i].id  %></customerID></h3>
                     <%  let date = new Date(Img.JsonData[i].paymentDue);
                     let newDateString = new Intl.DateTimeFormat("en-US", {

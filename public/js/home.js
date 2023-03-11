@@ -243,7 +243,7 @@ function changeTheme(){
             document.getElementById("invoice-div").style.backgroundSize = "450px 700px"
             document.getElementById("invoice-div").style.backgroundRepeat="no-repeat";
         }
-        document.getElementById("themeImg").src="http://172.17.55.102:5056/images/sun.png";
+        document.getElementById("themeImg").src="http://192.168.237.12:5056/images/sun.png";
         document.getElementById("main-div").style.backgroundColor="#141625";
         document.getElementById("head-div1").querySelector("h1").style.color="#FFFFFF";
         document.getElementById("head-div1").querySelector("h3").style.color="#DFE3FA";
@@ -293,7 +293,7 @@ function changeTheme(){
             document.getElementById("invoice-div").style.backgroundSize = "450px 700px"
             document.getElementById("invoice-div").style.backgroundRepeat="no-repeat";
         }
-        document.getElementById("themeImg").src="http://172.17.55.102:5056/images/moon.png"
+        document.getElementById("themeImg").src="http://192.168.237.12:5056/images/moon.png"
         document.getElementById("main-div").style.backgroundColor="#F8F8FB";
         document.getElementById("head-div1").querySelector("h1").style.color="#0C0E16";
         document.getElementById("head-div1").querySelector("h3").style.color="#888EB0";
@@ -338,7 +338,7 @@ function changeTheme(){
 // changeTheme(document.getElementById("themeImg"));
 
 
-const socket = io("ws://172.17.55.102:5050/");
+const socket = io("ws://192.168.237.12:5050/");
 
 
 //Send msg to server

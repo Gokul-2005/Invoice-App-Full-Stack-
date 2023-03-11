@@ -225,7 +225,7 @@ function changeTheme(){
         localStorage.setItem("theme","light");
         document.getElementById("whole-div").style.backgroundColor="#141625";
         document.getElementById("nav-div").style.backgroundColor="#1E2139";
-        document.getElementById("themeImg").src="http://172.17.55.102:5056/images/sun.png";
+        document.getElementById("themeImg").src="http://192.168.237.12:5056/images/sun.png";
         document.getElementById("main-div").style.backgroundColor="#141625";
         document.getElementById("go-back").style.color="#FFFFFF"
         document.getElementById("go-back").querySelector("i").style.color="#7C5DFA"
@@ -289,7 +289,7 @@ function changeTheme(){
         localStorage.setItem("theme","dark");
         document.getElementById("whole-div").style.backgroundColor="#F8F8FB";
         document.getElementById("nav-div").style.backgroundColor="#373B53";
-        document.getElementById("themeImg").src="http://172.17.55.102:5056/images/moon.png"
+        document.getElementById("themeImg").src="http://192.168.237.12:5056/images/moon.png"
         document.getElementById("main-div").style.backgroundColor="#F8F8FB";
         document.getElementById("go-back").style.color="#0C0E16"
         document.getElementById("go-back").querySelector("i").style.color="#7C5DFA"
@@ -351,9 +351,9 @@ function changeTheme(){
     }
 }
 
-changeTheme();
+// changeTheme();
 
-const socket = io("ws://172.17.55.102:5050/");
+const socket = io("ws://192.168.237.12:5050/");
 
 //Send msg to server
 socket.emit("Hello from client");

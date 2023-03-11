@@ -38,7 +38,7 @@ let connection = database.createConnection({
 
 
 //This line give access to ejs files
-app.set("view engine","ejs");
+app.set("view engine","ejs")
   
 
 connection.connect((error) => {
@@ -139,7 +139,7 @@ app.get("/details",(request,response) =>{
 
 
 
-server.listen(port,'172.17.55.102',() => {
+server.listen(port,'192.168.237.12',() => {
     console.log(`server is up on port ${port}`)
 })
 
