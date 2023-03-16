@@ -5,7 +5,7 @@
 <div id="whole-div">
     <div id="nav-div">
         <img id="logoImg" onclick="reloadPage()" src="<%=obj.logoImg%>" alt="">
-        <div id="opt-div"> <div id="theme-div"><img id="themeImg" onclick="changeTheme(this)" src="<%=obj.moonImg%>" alt=""> </div> <div id="profile-div"> <img id="avatarImg" src="<%=obj.avatarImg%>" alt=""> </div> </div>
+        <div id="opt-div"> <div id="theme-div"> </div> <div id="profile-div"> <img id="avatarImg" src="<%=obj.avatarImg%>" alt=""> </div> </div>
     </div>
     <div id="removeInvoiceBoxDiv"><div id="messageDiv"> <h1>Confirm Deletion</h1><h6></h6> <div id="removeOptDiv"> <button id="cancelButton" onclick="removeInvoice('no')">Cancel</button><button id="deleteButton" onclick="removeInvoice('yes')">Delete</button> </div> </div> </div>
     <% for(let i = 0; i < obj.JsonData.length; i++) { %>

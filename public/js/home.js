@@ -241,9 +241,12 @@ function changeTheme(){
             document.getElementById("invoice-div").style.backgroundImage="url('images/bgImgDark.png')";
             document.getElementById("invoice-div").style.backgroundPosition="300px 50px"
             document.getElementById("invoice-div").style.backgroundSize = "450px 700px"
-            document.getElementById("invoice-div").style.backgroundRepeat="no-repeat";
+            document.getElementById("invoice-div").style.backgroundRe
+            function themeForStart(){
+           
+            }     peat="no-repeat";
         }
-        document.getElementById("themeImg").src="http://192.168.237.12:5056/images/sun.png";
+        document.getElementById("themeImg").src="http://172.17.55.102:5056/images/sun.png";
         document.getElementById("main-div").style.backgroundColor="#141625";
         document.getElementById("head-div1").querySelector("h1").style.color="#FFFFFF";
         document.getElementById("head-div1").querySelector("h3").style.color="#DFE3FA";
@@ -291,9 +294,12 @@ function changeTheme(){
             document.getElementById("invoice-div").style.backgroundImage="url('images/bgImgLight.png')";
             document.getElementById("invoice-div").style.backgroundPosition="300px 50px"
             document.getElementById("invoice-div").style.backgroundSize = "450px 700px"
-            document.getElementById("invoice-div").style.backgroundRepeat="no-repeat";
+            document.getElementById("invoice-div").style.backgroundRe
+            function themeForStart(){
+           
+            }     peat="no-repeat";
         }
-        document.getElementById("themeImg").src="http://192.168.237.12:5056/images/moon.png"
+        document.getElementById("themeImg").src="http://172.17.55.102:5056/images/moon.png"
         document.getElementById("main-div").style.backgroundColor="#F8F8FB";
         document.getElementById("head-div1").querySelector("h1").style.color="#0C0E16";
         document.getElementById("head-div1").querySelector("h3").style.color="#888EB0";
@@ -337,8 +343,111 @@ function changeTheme(){
 
 // changeTheme(document.getElementById("themeImg"));
 
+function themeForStart(){
+    console.log(localStorage.getItem("theme") ==='light');
+    if(localStorage.getItem("theme")=="dark"){
+        document.getElementById("whole-Div").style.backgroundColor="#141625";
+        document.getElementById("nav-div").style.backgroundColor="#1E2139";
+        if(!(document.getElementById("invoice-div").innerHTML).trim()){   
+            document.getElementById("invoice-div").style.backgroundImage="url('images/bgImgDark.png')";
+            document.getElementById("invoice-div").style.backgroundPosition="300px 50px"
+            document.getElementById("invoice-div").style.backgroundSize = "450px 700px"
+            document.getElementById("invoice-div").style.backgroundRepeat="no-repeat";
+        }
+        document.getElementById("themeImg").src="http://172.17.55.102:5056/images/sun.png";
+        document.getElementById("main-div").style.backgroundColor="#141625";
+        document.getElementById("head-div1").querySelector("h1").style.color="#FFFFFF";
+        document.getElementById("head-div1").querySelector("h3").style.color="#DFE3FA";
+        document.getElementById("head-div2").style.color="#FFFFFF";
+        document.getElementById("head-div2").querySelector("button").style.color="7C5DFA";
+        for(let i = 0 ; i < document.getElementsByClassName("mainInvoiceDiv").length ; i++){
+            document.getElementsByClassName("mainInvoiceDiv")[i].style.backgroundColor="#1E2139";
+            document.getElementsByClassName("mainInvoiceDiv")[i].querySelector("h3").style.color = "#7E88C3";
+            document.getElementsByClassName("mainInvoiceDiv")[i].querySelector("h3").querySelector("customerid").style.color="#FFFFFF";
+            document.getElementsByClassName("mainInvoiceDiv")[i].querySelector("duedate").style.color = "#7E88C3";
+            document.getElementsByClassName("mainInvoiceDiv")[i].querySelector("customername").style.color = "#FFFFFF";
+            document.getElementsByClassName("mainInvoiceDiv")[i].querySelectorAll("div")[0].style.color = "#FFFFFF";
+            if((document.getElementsByClassName("mainInvoiceDiv")[i].querySelectorAll("div")[1].innerText).includes("Paid")){
+                document.getElementsByClassName("mainInvoiceDiv")[i].querySelectorAll("div")[1].style.color = "#33D69F";
+                document.getElementsByClassName("mainInvoiceDiv")[i].querySelectorAll("div")[1].style.backgroundColor = "#33d69f1f";
+            }
+            else if((document.getElementsByClassName("mainInvoiceDiv")[i].querySelectorAll("div")[1].innerText).includes("Pending")){
+                document.getElementsByClassName("mainInvoiceDiv")[i].querySelectorAll("div")[1].style.color = "#FF8F00";
+                document.getElementsByClassName("mainInvoiceDiv")[i].querySelectorAll("div")[1].style.backgroundColor = "#FF8F001f";
+            }
+            else{
+                document.getElementsByClassName("mainInvoiceDiv")[i].querySelectorAll("div")[1].style.color = "#DFE3FA";
+                document.getElementsByClassName("mainInvoiceDiv")[i].querySelectorAll("div")[1].style.backgroundColor = "#DFE3FA1f";
+            }
+            document.getElementById("invoiceDivChild").style.backgroundColor="#141625";
+            document.getElementById("invoiceIdDiv").style.color="#FFFFFF";
+            for(let j=0 ; j<document.getElementsByClassName("clsForLabel").length ; j++){document.getElementsByClassName("clsForLabel")[j].style.color="#DFE3FA"}
+            for(let k = 0 ; k<document.getElementsByTagName("input").length ; k++){
+                document.getElementsByTagName("input")[k].style.color="#FFFFFF";
+                document.getElementsByTagName("input")[k].style.backgroundColor="#1E2139";
+                document.getElementsByTagName("input")[k].style.borderColor="#1E2139";
+            }
+            for( let l=0 ; l<document.getElementsByClassName("clsForItemTotalPrice").length ; l++){document.getElementsByClassName("clsForItemTotalPrice")[l].style.color="#DFE3FA"}
+            document.getElementById("addNewItemButton").style.backgroundColor="#252945";
+            document.getElementById("addNewItemButton").style.color="#DFE3FA";
+            document.getElementById("messageDiv").style.backgroundColor="#1E2139"
+            document.getElementById("messageBox").style.color="#FFFFFF"
+        }
+    }   
+    else{
+        document.getElementById("whole-Div").style.backgroundColor="#F8F8FB";
+        document.getElementById("nav-div").style.backgroundColor="#373B53";
+        if(!(document.getElementById("invoice-div").innerHTML).trim()){   
+            document.getElementById("invoice-div").style.backgroundImage="url('images/bgImgLight.png')";
+            document.getElementById("invoice-div").style.backgroundPosition="300px 50px"
+            document.getElementById("invoice-div").style.backgroundSize = "450px 700px"
+            document.getElementById("invoice-div").style.backgroundRepeat="no-repeat";
+        }
+        document.getElementById("themeImg").src="http://172.17.55.102:5056/images/moon.png"
+        document.getElementById("main-div").style.backgroundColor="#F8F8FB";
+        document.getElementById("head-div1").querySelector("h1").style.color="#0C0E16";
+        document.getElementById("head-div1").querySelector("h3").style.color="#888EB0";
+        document.getElementById("head-div2").style.color="#0C0E16";
+        document.getElementById("head-div2").querySelector("button").style.color="7C5DFA";
+        for(let i = 0 ; i < document.getElementsByClassName("mainInvoiceDiv").length ; i++){
+            document.getElementsByClassName("mainInvoiceDiv")[i].style.backgroundColor="#FFFFFF";
+            document.getElementsByClassName("mainInvoiceDiv")[i].querySelector("h3").style.color = "#7E88C3";
+            document.getElementsByClassName("mainInvoiceDiv")[i].querySelector("h3").querySelector("customerid").style.color="#0C0E16";
+            document.getElementsByClassName("mainInvoiceDiv")[i].querySelector("duedate").style.color = "#888EB0";
+            document.getElementsByClassName("mainInvoiceDiv")[i].querySelector("customername").style.color = "#858BB2";
+            document.getElementsByClassName("mainInvoiceDiv")[i].querySelectorAll("div")[0].style.color = "#0C0E16";
+            if((document.getElementsByClassName("mainInvoiceDiv")[i].querySelectorAll("div")[1].innerText).includes("Paid")){
+                document.getElementsByClassName("mainInvoiceDiv")[i].querySelectorAll("div")[1].style.color = "#33D69F";
+                document.getElementsByClassName("mainInvoiceDiv")[i].querySelectorAll("div")[1].style.backgroundColor = "#33d69f1f";
+            }
+            else if((document.getElementsByClassName("mainInvoiceDiv")[i].querySelectorAll("div")[1].innerText).includes("Pending")){
+                document.getElementsByClassName("mainInvoiceDiv")[i].querySelectorAll("div")[1].style.color = "#FF8F00";
+                document.getElementsByClassName("mainInvoiceDiv")[i].querySelectorAll("div")[1].style.backgroundColor = "#FF8F001f";
+            }
+            else{
+                document.getElementsByClassName("mainInvoiceDiv")[i].querySelectorAll("div")[1].style.color = "#373B53";
+                document.getElementsByClassName("mainInvoiceDiv")[i].querySelectorAll("div")[1].style.backgroundColor = "#373B531f";
+            }
+            document.getElementById("invoiceDivChild").style.backgroundColor="#FFFFFF";
+            document.getElementById("invoiceIdDiv").style.color="#0C0E16";
+            for(let j=0 ; j<document.getElementsByClassName("clsForLabel").length ; j++){document.getElementsByClassName("clsForLabel")[j].style.color="#7E88C3"}
+            for(let k = 0 ; k<document.getElementsByTagName("input").length ; k++){
+                document.getElementsByTagName("input")[k].style.color="#0C0E16";
+                document.getElementsByTagName("input")[k].style.backgroundColor="#FFFFFF";
+                document.getElementsByTagName("input")[k].style.borderColor="#DFE3FA";
+            }
+            for( let l=0 ; l<document.getElementsByClassName("clsForItemTotalPrice").length ; l++){document.getElementsByClassName("clsForItemTotalPrice")[l].style.color="#888EB0"}
+            document.getElementById("addNewItemButton").style.backgroundColor="#F9FAFE";
+            document.getElementById("addNewItemButton").style.color="#7E88C3";
+            document.getElementById("messageDiv").style.backgroundColor="#FFFFFF";
+            document.getElementById("messageBox").style.color="#0C0E16"
+        }
+    }
+}
 
-const socket = io("ws://192.168.237.12:5050/");
+window.onload = (() => {themeForStart()});
+
+const socket = io("ws://172.17.55.102:5050/");
 
 
 //Send msg to server

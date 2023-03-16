@@ -129,7 +129,7 @@ app.get("/details",(request,response) =>{
         bgImgDark : 'images/bgImgDark.png', 
     }
     response.render("details",{obj})
-})
+});
 
 
 
@@ -138,8 +138,7 @@ app.get("/details",(request,response) =>{
 // this line should be always at the bottom of the scrpit
 
 
-
-server.listen(port,'192.168.237.12',() => {
+server.listen(port,'172.17.55.102',() => {
     console.log(`server is up on port ${port}`)
 })
 
